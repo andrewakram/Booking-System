@@ -4,6 +4,7 @@ namespace App\Http\Controllers\V1\Provider;
 
 use App\Http\Requests\V1\Services\CreateMultiServiceRequest;
 use App\Interfaces\ServiceRepositoryInterface;
+use App\Models\Service;
 use App\Services\ServiceService;
 use App\Traits\ApiResponserTrait;
 use App\Http\Controllers\Controller;
@@ -25,6 +26,8 @@ class ServiceController extends Controller
 
     public function addMultiService(CreateMultiServiceRequest $request)
     {
+        $this->authorize('create', Service::class);
+
         return $this->successResponse($this->serviceService->addMultiService($request));
     }
 }
