@@ -1,0 +1,1367 @@
+{
+	"info": {
+		"_postman_id": "c7631160-4afb-4ebc-abaf-1e7060c46655",
+		"name": "Booking-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4009996"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "provider1@demo.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "provider1@demo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"login"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 11:40:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"access_token\": \"2|6fbTyKAuYl8qvKxysD4WlRdtbe2AHYepUgba26czf83fe875\",\n        \"id\": 2,\n        \"name\": \"Provider1\",\n        \"email\": \"provider1@demo.com\",\n        \"created_at\": \"2025-08-20 00:34:43\",\n        \"role\": [\n            {\n                \"id\": 2,\n                \"name\": \"provider\",\n                \"guard_name\": \"api\",\n                \"created_at\": \"2025-08-20T00:34:42.000000Z\",\n                \"updated_at\": \"2025-08-20T00:34:42.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 2,\n                    \"role_id\": 2\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Dashboard statistics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "provider1@demo.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/admin/dashboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"admin",
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Dashboard statistics",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "provider1@demo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/admin/dashboard",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"dashboard"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Aug 2025 01:50:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookings_per_provider\": [\n        {\n            \"provider_id\": 2,\n            \"total_bookings\": 1,\n            \"provider\": {\n                \"id\": 2,\n                \"name\": \"Provider1\"\n            }\n        }\n    ],\n    \"cancelled_vs_confirmed\": [\n        {\n            \"service_id\": 1,\n            \"confirmed_count\": \"1\",\n            \"cancelled_count\": \"0\",\n            \"service\": {\n                \"id\": 1,\n                \"name\": \"Service_1 Provider1\"\n            }\n        }\n    ],\n    \"peak_hours_daily\": [\n        {\n            \"hour\": 10,\n            \"total\": 1\n        }\n    ],\n    \"peak_hours_weekly\": [\n        {\n            \"day\": 3,\n            \"total\": 1\n        }\n    ],\n    \"avg_duration_per_customer\": [\n        {\n            \"customer_id\": 7,\n            \"avg_duration\": \"90.0000\",\n            \"customer\": {\n                \"id\": 7,\n                \"name\": \"Customer1\",\n                \"email\": \"customer1@demo.com\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Booking",
+					"item": [
+						{
+							"name": "Get availability",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{customer_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/get-availability?service_id=1&time_zone=Africa/Cairo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"get-availability"
+									],
+									"query": [
+										{
+											"key": "service_id",
+											"value": "1"
+										},
+										{
+											"key": "time_zone",
+											"value": "Africa/Cairo"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get availability",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/customer/get-availability?service_id=1&time_zone=Africa/Cairo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"customer",
+												"get-availability"
+											],
+											"query": [
+												{
+													"key": "service_id",
+													"value": "1"
+												},
+												{
+													"key": "time_zone",
+													"value": "Africa/Cairo"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 22:15:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"2025-08-21\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-22\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-23\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-24\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-25\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-26\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-27\": [\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Booking",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{customer_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "service_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "location_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "time_zone",
+											"value": "Africa/Cairo",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2025-05-26",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "10:00:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/book",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"book"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Booking",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "service_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "location_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "time_zone",
+													"value": "Africa/Cairo",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2025-08-26",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "10:00:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/customer/book",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"customer",
+												"book"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 23:44:15 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"id\": 2,\n        \"service_id\": 1,\n        \"customer_id\": 7,\n        \"provider_id\": 2,\n        \"location_id\": \"1\",\n        \"date\": \"2025-08-26\",\n        \"start_time\": \"10:00:00\",\n        \"end_time\": \"11:30:00\",\n        \"status\": \"pending\",\n        \"service\": null,\n        \"provider\": null,\n        \"location\": null\n    }\n}"
+								},
+								{
+									"name": "Create Booking (error)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "service_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "location_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "time_zone",
+													"value": "Africa/Cairo",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2025-08-26",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "10:00:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/customer/book",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"customer",
+												"book"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 23:43:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"This time slot is already booked.\",\n    \"errors\": {\n        \"start_time\": [\n            \"This time slot is already booked.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Create Booking (error)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "service_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "location_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "time_zone",
+													"value": "Africa/Cairo",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2025-05-26",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "10:00:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/customer/book",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"customer",
+												"book"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 23:55:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Sorry! You cannot book a service in the past\",\n    \"errors\": {\n        \"date\": [\n            \"Sorry! You cannot book a service in the past\"\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "show published services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{customer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/customer/show-published-services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"customer",
+								"show-published-services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get availability",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/get-availability?service_id=1&time_zone=Africa/Cairo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"get-availability"
+									],
+									"query": [
+										{
+											"key": "service_id",
+											"value": "1"
+										},
+										{
+											"key": "time_zone",
+											"value": "Africa/Cairo"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 22:15:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"2025-08-21\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-22\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-23\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-24\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-25\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-26\": [\n            {\n                \"start\": \"10:00\",\n                \"end\": \"11:30\"\n            },\n            {\n                \"start\": \"11:30\",\n                \"end\": \"13:00\"\n            },\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ],\n        \"2025-08-27\": [\n            {\n                \"start\": \"13:00\",\n                \"end\": \"14:30\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "show published services",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/show-published-services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"show-published-services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Aug 2025 02:50:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Service_1 Provider1\",\n            \"description\": \"Service_1 Provider1description\",\n            \"duration\": 90,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:53\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Category1\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 2,\n                \"name\": \"Provider1\",\n                \"email\": \"provider1@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:38.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:38.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 1,\n                    \"location_id\": 1,\n                    \"service_id\": 1,\n                    \"created_at\": \"2025-08-20T23:35:53.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:53.000000Z\",\n                    \"location_name\": \"Location_1 Provider1\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 2,\n                    \"location_id\": 2,\n                    \"service_id\": 1,\n                    \"created_at\": \"2025-08-20T23:35:53.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:53.000000Z\",\n                    \"location_name\": \"Location_2 Provider1\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Service_2 Provider1\",\n            \"description\": \"Service_2 Provider1description\",\n            \"duration\": 30,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:54\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Category2\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 2,\n                \"name\": \"Provider1\",\n                \"email\": \"provider1@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:38.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:38.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 3,\n                    \"location_id\": 1,\n                    \"service_id\": 2,\n                    \"created_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"location_name\": \"Location_1 Provider1\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 4,\n                    \"location_id\": 2,\n                    \"service_id\": 2,\n                    \"created_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"location_name\": \"Location_2 Provider1\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Service_1 Provider2\",\n            \"description\": \"Service_1 Provider2description\",\n            \"duration\": 60,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:54\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Category1\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 3,\n                \"name\": \"Provider2\",\n                \"email\": \"provider2@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:39.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:39.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 5,\n                    \"location_id\": 3,\n                    \"service_id\": 3,\n                    \"created_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"location_name\": \"Location_1 Provider2\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 6,\n                    \"location_id\": 4,\n                    \"service_id\": 3,\n                    \"created_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:54.000000Z\",\n                    \"location_name\": \"Location_2 Provider2\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Service_2 Provider2\",\n            \"description\": \"Service_2 Provider2description\",\n            \"duration\": 90,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:54\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Category2\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 3,\n                \"name\": \"Provider2\",\n                \"email\": \"provider2@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:39.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:39.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 7,\n                    \"location_id\": 3,\n                    \"service_id\": 4,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_1 Provider2\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 8,\n                    \"location_id\": 4,\n                    \"service_id\": 4,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_2 Provider2\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Service_1 Provider3\",\n            \"description\": \"Service_1 Provider3description\",\n            \"duration\": 90,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:55\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Category1\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 4,\n                \"name\": \"Provider3\",\n                \"email\": \"provider3@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:39.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:39.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 9,\n                    \"location_id\": 5,\n                    \"service_id\": 5,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_1 Provider3\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 10,\n                    \"location_id\": 6,\n                    \"service_id\": 5,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_2 Provider3\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Service_2 Provider3\",\n            \"description\": \"Service_2 Provider3description\",\n            \"duration\": 90,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:55\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Category2\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 4,\n                \"name\": \"Provider3\",\n                \"email\": \"provider3@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:39.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:39.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 11,\n                    \"location_id\": 5,\n                    \"service_id\": 6,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_1 Provider3\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 12,\n                    \"location_id\": 6,\n                    \"service_id\": 6,\n                    \"created_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:55.000000Z\",\n                    \"location_name\": \"Location_2 Provider3\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Service_1 Provider4\",\n            \"description\": \"Service_1 Provider4description\",\n            \"duration\": 30,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:56\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Category1\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 5,\n                \"name\": \"Provider4\",\n                \"email\": \"provider4@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:40.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:40.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 13,\n                    \"location_id\": 7,\n                    \"service_id\": 7,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_1 Provider4\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 14,\n                    \"location_id\": 8,\n                    \"service_id\": 7,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_2 Provider4\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Service_2 Provider4\",\n            \"description\": \"Service_2 Provider4description\",\n            \"duration\": 90,\n            \"price\": \"90.00\",\n            \"created_at\": \"2025-08-20 23:35:56\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Category2\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 5,\n                \"name\": \"Provider4\",\n                \"email\": \"provider4@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:40.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:40.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 15,\n                    \"location_id\": 7,\n                    \"service_id\": 8,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_1 Provider4\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 16,\n                    \"location_id\": 8,\n                    \"service_id\": 8,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_2 Provider4\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Service_1 Provider5\",\n            \"description\": \"Service_1 Provider5description\",\n            \"duration\": 60,\n            \"price\": \"60.00\",\n            \"created_at\": \"2025-08-20 23:35:56\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"Category1\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 6,\n                \"name\": \"Provider5\",\n                \"email\": \"provider5@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:40.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:40.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 17,\n                    \"location_id\": 9,\n                    \"service_id\": 9,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_1 Provider5\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 18,\n                    \"location_id\": 10,\n                    \"service_id\": 9,\n                    \"created_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:56.000000Z\",\n                    \"location_name\": \"Location_2 Provider5\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Service_2 Provider5\",\n            \"description\": \"Service_2 Provider5description\",\n            \"duration\": 30,\n            \"price\": \"60.00\",\n            \"created_at\": \"2025-08-20 23:35:57\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Category2\",\n                \"created_at\": \"2025-08-20T23:35:43.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:43.000000Z\"\n            },\n            \"provider\": {\n                \"id\": 6,\n                \"name\": \"Provider5\",\n                \"email\": \"provider5@demo.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2025-08-20T23:35:40.000000Z\",\n                \"updated_at\": \"2025-08-20T23:35:40.000000Z\"\n            },\n            \"locations\": [\n                {\n                    \"id\": 19,\n                    \"location_id\": 9,\n                    \"service_id\": 10,\n                    \"created_at\": \"2025-08-20T23:35:57.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:57.000000Z\",\n                    \"location_name\": \"Location_1 Provider5\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                },\n                {\n                    \"id\": 20,\n                    \"location_id\": 10,\n                    \"service_id\": 10,\n                    \"created_at\": \"2025-08-20T23:35:57.000000Z\",\n                    \"updated_at\": \"2025-08-20T23:35:57.000000Z\",\n                    \"location_name\": \"Location_2 Provider5\",\n                    \"location_time_zone\": \"Africa/Cairo\",\n                    \"location_lat\": null,\n                    \"location_lng\": null\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "Locations",
+					"item": [
+						{
+							"name": "Add multi Locations",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{provider_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"name\": \"test location\",\r\n            \"time_zone\": \"Africa/Cairo\",\r\n            \"lat\": \"31.444444\", //nullable\r\n            \"lng\": \"29.444444\", //nullable\r\n            \"availability\":[\r\n                {\r\n                    \"day_of_week\" : \"saturday\",\r\n                    \"start_time\" : \"06:00:00\",\r\n                    \"end_time\" : \"10:00:00\"\r\n                }\r\n            ],\r\n            \"availability_override\":[\r\n                {\r\n                    \"date\" : \"2025-08-27\",\r\n                    \"start_time\" : \"08:00:00\",\r\n                    \"end_time\" : \"09:00:00\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/provider/add-multi-location",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"provider",
+										"add-multi-location"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add multi Locations",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"name\": \"test location\",\r\n            \"time_zone\": \"Africa/Cairo\",\r\n            \"lat\": \"31.444444\", //nullable\r\n            \"lng\": \"29.444444\", //nullable\r\n            \"availability\":[\r\n                {\r\n                    \"day_of_week\" : \"saturday\",\r\n                    \"start_time\" : \"06:00:00\",\r\n                    \"end_time\" : \"10:00:00\"\r\n                }\r\n            ],\r\n            \"availability_override\":[\r\n                {\r\n                    \"date\" : \"2025-08-27\",\r\n                    \"start_time\" : \"08:00:00\",\r\n                    \"end_time\" : \"09:00:00\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/provider/add-multi-location",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"provider",
+												"add-multi-location"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 17:38:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Services",
+					"item": [
+						{
+							"name": "Add multi services",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{provider_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"location_ids\": [1,2],//array\r\n            \"name\": \"Haircut\",\r\n            \"description\": \"Professional haircut for men\",\r\n            \"category_id\": 1,\r\n            \"duration\": 30,\r\n            \"price\": 20.00,\r\n            \"is_published\": true\r\n        },\r\n        {\r\n            \"location_ids\": [2],//array\r\n            \"name\": \"Full Body Massage\",\r\n            \"description\": \"60 minutes relaxing massage\",\r\n            \"category_id\": 2,\r\n            \"duration\": 60,\r\n            \"price\": 50.00,\r\n            \"is_published\": false\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/provider/add-multi-service",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"provider",
+										"add-multi-service"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add multi services",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"location_ids\": [1,2],//array\r\n            \"name\": \"Haircut\",\r\n            \"description\": \"Professional haircut for men\",\r\n            \"category_id\": 1,\r\n            \"duration\": 30,\r\n            \"price\": 20.00,\r\n            \"is_published\": true\r\n        },\r\n        {\r\n            \"location_ids\": [2],//array\r\n            \"name\": \"Full Body Massage\",\r\n            \"description\": \"60 minutes relaxing massage\",\r\n            \"category_id\": 2,\r\n            \"duration\": 60,\r\n            \"price\": 50.00,\r\n            \"is_published\": false\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/provider/add-multi-service",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"provider",
+												"add-multi-service"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Aug 2025 16:56:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update Status Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{customer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "confirmed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/provider/update-status/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"provider",
+								"update-status",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Status Booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "confirmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/provider/update-status/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"provider",
+										"update-status",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Aug 2025 01:05:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"id\": 2,\n        \"service_id\": 1,\n        \"customer_id\": 7,\n        \"provider_id\": 2,\n        \"location_id\": 1,\n        \"date\": \"2025-08-26\",\n        \"start_time\": \"10:00:00\",\n        \"end_time\": \"11:30:00\",\n        \"status\": \"confirmed\",\n        \"service\": null,\n        \"provider\": null,\n        \"location\": null\n    }\n}"
+						},
+						{
+							"name": "Update Status Booking (error)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "confirmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/provider/update-status/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"provider",
+										"update-status",
+										"2"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Aug 2025 01:04:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cannot change status from confirmed to confirmed\",\n    \"errors\": {\n        \"status\": [\n            \"Cannot change status from confirmed to confirmed\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "provider_token",
+			"value": "2|6fbTyKAuYl8qvKxysD4WlRdtbe2AHYepUgba26czf83fe875",
+			"type": "default"
+		},
+		{
+			"key": "customer_token",
+			"value": "2|yhRJBwMcWUu0PXpKCZQpSTJnK5tt7M026Ndn95Ve700cfcd2",
+			"type": "default"
+		},
+		{
+			"key": "admin_token",
+			"value": "3|swJa55AoaV1lNqgW0xvIkZxSG4OEkZb0FeTgm52sb8d5409c",
+			"type": "default"
+		}
+	]
+}
